@@ -3,11 +3,14 @@
     "name": "weather-app",
     "builds": [
         {
-            "src": "*.html",
+            "src": "**/*",
             "use": "@vercel/static"
         }
     ],
     "routes": [
+        {
+            "handle": "filesystem"
+        },
         {
             "src": "/(.*)",
             "dest": "/index.html"
